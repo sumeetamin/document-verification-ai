@@ -60,6 +60,16 @@ Training uses three synthetic label styles; a fourth style is held out. The eval
 
 The rules baseline intentionally supports only the first label style. The ML comparison measures label generalization, not superiority over a fully engineered commercial rules system. Quantity mismatch detection is evaluated separately from header extraction. A high mismatch detection rate does not imply high document-level accuracy.
 
+### Public real-document benchmark
+
+The repository also includes a reproducible evaluation against [FUNSD](https://guillaumejaume.github.io/FUNSD/), a public dataset of real scanned forms and field annotations. Download FUNSD from its official site into the ignored `data/private/` folder, then run:
+
+```bash
+python -m docverify.real_benchmark --train-dir data/private/FUNSD/dataset/training_data/annotations --test-dir data/private/FUNSD/dataset/testing_data/annotations
+```
+
+This evaluates classification of the dataset's `question`, `answer`, `header`, and `other` roles using a held-out real-document split. FUNSD does **not** contain paired invoices and purchase orders or dependable invoice-total fields, so its result is reported separately in `reports/funsd_evaluation.json`; it must not be presented as invoice verification accuracy.
+
 ```mermaid
 flowchart LR
     A[PDF / text / optional image] --> B[Text extraction or local OCR]
