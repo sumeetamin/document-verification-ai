@@ -1,0 +1,9 @@
+Invoice number: INV-0042
+Purchase order: PO-0042
+Vendor: Demo Supplier 6
+Invoice date: 2026-01-15
+Currency: INR
+Subtotal: 65.00
+Tax: 11.70
+Grand total: 76.70
+ITEM | SKU-0 | Office supplies | 5 | 13.00 | 65.00

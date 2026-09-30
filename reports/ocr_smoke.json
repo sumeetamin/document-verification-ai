@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "source": "rasterized synthetic invoice at 144 dpi",
+  "ocr_text": [
+    "DEMO / INVOICE\nInvoice number: INV-0042\nPurchase order: PO-0042\nVendor: Demo Supplier 6\nInvoice date: 2026-01-15\nCurrency: INR\nSubtotal: 65.00\nTax: 11.70\nGrand total: 76.70\nITEM | SKU-0 | Office supplies | 6 | 13.00 | 65.00"
+  ],
+  "extracted": {
+    "document_id": "INV-0042",
+    "po_id": "PO-0042",
+    "vendor": "Demo Supplier 6",
+    "date": "2026-01-15",
+    "currency": "INR",
+    "subtotal": "65.00",
+    "tax": "11.70",
+    "total": "76.70",
+    "items": [
+      {
+        "sku": "SKU-0",
+        "description": "Office supplies",
+        "quantity": "6",
+        "unit_price": "13.00",
+        "amount": "65.00"
+      }
+    ]
+  },
+  "warnings": [],
+  "note": "Single clean-scan smoke test, not OCR accuracy benchmark."
+}

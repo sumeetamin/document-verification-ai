@@ -1,0 +1,48 @@
+{
+  "dataset": "80 synthetic documents with a held-out label style; not a real-world benchmark",
+  "training": "Character TF-IDF + logistic regression on three field-label styles",
+  "results": [
+    {
+      "method": "rules",
+      "layout": "supported labels",
+      "documents": 80,
+      "field_exact_match": 1.0,
+      "quantity_mismatch_detection": 1.0,
+      "clean_document_review_rate": 0.0,
+      "mean_extraction_ms": 0.10141249440493993
+    },
+    {
+      "method": "ml",
+      "layout": "supported labels",
+      "documents": 80,
+      "field_exact_match": 1.0,
+      "quantity_mismatch_detection": 1.0,
+      "clean_document_review_rate": 0.0,
+      "mean_extraction_ms": 8.882547500252258
+    },
+    {
+      "method": "rules",
+      "layout": "unseen labels",
+      "documents": 80,
+      "field_exact_match": 0.0,
+      "quantity_mismatch_detection": 1.0,
+      "clean_document_review_rate": 1.0,
+      "mean_extraction_ms": 0.07158750086091459
+    },
+    {
+      "method": "ml",
+      "layout": "unseen labels",
+      "documents": 80,
+      "field_exact_match": 0.5,
+      "quantity_mismatch_detection": 1.0,
+      "clean_document_review_rate": 1.0,
+      "mean_extraction_ms": 9.028664996731095
+    }
+  ],
+  "limitations": [
+    "Optional RapidOCR for scans; OCR errors propagate to extraction.",
+    "Pipe/semicolon-delimited line items only.",
+    "Small synthetic template split does not establish generalization to arbitrary invoices.",
+    "No external LLM or paid API required."
+  ]
+}
